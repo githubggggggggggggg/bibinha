@@ -1,0 +1,113 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10;
+}
+
+h1 {
+    color: #ff69b4;
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+
+input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ff69b4;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ff69b4;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+    background-color: #ff1493;
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+#photoGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.photo {
+    width: 150px;
+    height: 100px;
+    margin: 5px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.emotional-text {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 20px 0;
+    color: #333;
+    text-align: left;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.balloons {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.balloon {
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    height: 70px;
+    border-radius: 50px 50px 0 0;
+    animation: float 5s linear infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100vh);
+    }
+}

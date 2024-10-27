@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Surpresa de Aniversário!</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vinda, meu amor!</h1>
+        <p>Você sabe qual é a data de hoje?</p>
+        <input type="text" id="dateInput" placeholder="Digite a data (dd/mm/yyyy)">
+        <a href="#" class="button" id="startButton">Verificar</a>
+    </div>
+    <script>
+        document.getElementById('startButton').addEventListener('click', function(event) {
+            const inputDate = document.getElementById('dateInput').value;
+            const today = new Date();
+            const formattedToday = `${today.getDate().toString().padStart(2, '0')}/${(today.getMonth() + 1).toString().padStart(2, '0')}/${today.getFullYear()}`;
+
+            if (inputDate === formattedToday) {
+                window.location.href = "photos.html";
+            } else {
+                alert("Essa não é a data correta. Tente novamente!");
+            }
+        });
+    </script>
+</body>
+</html>
